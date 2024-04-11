@@ -1,12 +1,13 @@
-
+import categories from './api'
 import './App.css'
+import Row from './components/Row'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>Base</div>
+      {categories.map((category) => {
+        return <Row key={category.nome} title={category.title} path={category.path} />
+      })}
     </>
   )
 }
