@@ -5,9 +5,13 @@
 }
 
 .banner-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     margin-left: 30px;
     padding-top: 140px;
-    height: 190px;
+    height: 200px;
+    width: 400px;
 }
 
 .banner-titulo {
@@ -24,6 +28,7 @@
     max-width: 360px;
     height: 80px;
     text-shadow: 1px 1px 1px black;
+    text-align: justify;
 }
 
 .banner-button {
