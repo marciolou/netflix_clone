@@ -1,10 +1,12 @@
 import categories from './api'
 import './App.css'
-import Row from './components/Row'
+import Banner from './components/Banner/Banner'
+import Row from './components/Row/Row'
 
 function App() {
   return (
     <>
+      <Banner />
       {categories.map((category) => {
         return <Row
           key={category.nome}
