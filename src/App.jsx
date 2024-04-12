@@ -6,7 +6,11 @@ function App() {
   return (
     <>
       {categories.map((category) => {
-        return <Row key={category.nome} title={category.title} path={category.path} />
+        return <Row
+          key={category.nome}
+          title={category.title}
+          path={category.path}
+          isLarge={category.isLarge} />
       })}
     </>
   )

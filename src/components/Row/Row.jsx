@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react'
-import { getMovies } from '../api'
+import { getMovies } from '../../api'
 
 import './Row.css'
 
 const imageHost = 'https://image.tmdb.org/t/p/original/'
 
-const Row = ({ title, path }) => {
+const Row = ({ title, path, isLarge }) => {
 
   const [movies, setMovies] = useState([])
 
@@ -28,7 +28,7 @@ const Row = ({ title, path }) => {
       <div className='row-cards'>
         {movies?.map(movie => {
           return (
-            <img key={movie.id} src={`${imageHost}${movie.poster_path}`} alt={movie.name} />
+            <img className={`movie-card ${isLarge && 'movie-card-large'}`} key={movie.id} src={`${imageHost}${movie.poster_path}`} alt={movie.name} />
           )
         })}
       </div>
